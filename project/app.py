@@ -5,32 +5,23 @@ from PIL import Image
 import lasio
 import matplotlib.pyplot as plt
 
-hide_footer = """<style>
-footer {
-  visibility: hidden;
-}
-</style>
-"""
 
-footer = """<style>
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height:23px;
-  background-color: white;
-  color: black;
-  text-align: center;
-  align-items:center;
-}
-</style>
-<div class="footer">
-  <p>Developed with ❤️ by Sourav</p>
-</div>
-"""
-st.markdown(hide_footer, unsafe_allow_html=True)
-st.markdown(footer, unsafe_allow_html=True)
+
+
+st.set_page_config(
+    page_title="Well Log Data Analysis",
+    page_icon="https://th.bing.com/th/id/OIP.L1NZgqUFgDKqy1uAwf2-9AHaHa?pid=ImgDet&rs=1",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    },
+
+)
+
+
 
 #st.set_page_config(page_title="Survey result")
 st.header("Ensure column contain GR DEPTH")
